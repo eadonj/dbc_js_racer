@@ -21,15 +21,18 @@ $(document).ready(function() {
       else if (Game.player2.location == gameEnd) {
         winner = Game.player2.name;
       }
-      $("#winner").html(winner + " is the winner!");
-      // $("#new_game").fadeIn("slow");
+      $(".racer_table").fadeOut(300);
+      $("#winner").html(winner + " is the winner!").delay(500).fadeIn(300);
+      
       $.ajax({
         type: "POST",
         url: '/game',
         data: {player_one: Game.player1, player_two: Game.player2, winner: winner, timer: Game.diff}
       }).done(function(data){
-        console.log(data[0]);
-        window.location = ('/game/stats/'+data[0]+'/'+data[1]);
+        
+        $('#url').html('/game/stats/'+data[0]+'/'+data[1]).fadeIn(300);
+        $('#time').html('Time to victory: '+data[1]).fadeIn(300);
+        $("#reset").fadeIn(300);
       });
     } else {
       if (event.which == Game.player1.keystroke){
@@ -69,7 +72,7 @@ $(document).ready(function() {
     e.preventDefault();
     Game.player1 = new Player( $("#player1 input").val(), "#player1", 90 );
     $("#player1").fadeOut(300);
-    $("#player2").fadeIn(300).delay(100);
+    $("#player2").delay(500).fadeIn(300);
   });
 });
 

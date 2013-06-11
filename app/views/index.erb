@@ -1,24 +1,32 @@
 <div class="container">
-  <p>Player1</p>
   <form id="player1">
-    <input type="text" placeholder="initials" name="initials" required>
+    <input type="text" placeholder="enter player 1 initials" name="initials" required>
     <input type="hidden" name="number" value="1">
-    <input type="submit" value="Play">
+    <input class="button" type="submit" value="Play">
   </form>
-</br>
- <p>Player2</p>
+ 
   <form id="player2">
-    <input type="text" placeholder="initials" name="initials" required>
+    <input type="text" placeholder="Player 2 Initials" name="initials" required>
     <input type="hidden" name="number" value="2">
-    <input type="submit" value="Play">
+    <input class="button" type="submit" value="Play">
   </form>
 </div>
 
 
 <table class="racer_table">
   <div id="winner"></div>
+  <div id="url"></div>
+  <div id="time"></div>
+  <div id="reset"><a href='/'>Reset</a></div>
   <tr id="player1_strip">
     <td class="active"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -29,7 +37,14 @@
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>   
+    <td></td>
+    <td></td>
+    <td></td>
 
   </tr>
 </table>
-  <div style="display:none; margin: 10px; text-align:center; padding-top:10px; color:#aaa; width:60px; height: 30px; background-color: #363636;" id="new_game">Reset</div>
+  

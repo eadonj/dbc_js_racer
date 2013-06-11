@@ -15,8 +15,8 @@ post '/game' do
   round = Round.find_by_player_id_and_game_id(player.id, game.id)
   round.winner = true
   round.save
-
-  [game.id, params[:timer].to_f].to_json
+  time = params[:timer].to_f / 1000
+  [game.id, time].to_json
 end
 
 get '/game/stats/:id/:time' do
