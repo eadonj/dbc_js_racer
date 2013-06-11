@@ -7,3 +7,18 @@
 th {
   text-align: left;
 }
+
+.racer_table {
+  display: none;
+}
+
+.racer_table td {
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #000;
+}
+
+.racer_table td.active {
+  background-color: black;
+}

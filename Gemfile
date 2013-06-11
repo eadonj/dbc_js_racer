@@ -14,6 +14,7 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'shotgun'
 

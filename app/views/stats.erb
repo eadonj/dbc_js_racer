@@ -1,0 +1,5 @@
+<div id="container">    
+  <%= Player.find(@round.player_id).initial %> is the winner winner chicken dinner!
+  <p> With an amazing time of: <%= @timer.to_f / 1000 %> sec</p>
+
+</div>
